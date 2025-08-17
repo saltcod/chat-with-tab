@@ -29,13 +29,13 @@ const swLoaderPath = path.join(process.cwd(), 'dist', 'service-worker-loader.js'
 if (fs.existsSync(swLoaderPath)) {
   let content = fs.readFileSync(swLoaderPath, 'utf8')
   console.log('Original service worker content:', content)
-  
+
   // Replace the dynamic import with our consistent filename
   content = content.replace(/import '\.\/assets\/background\.ts-[^']+\.js';/, "import './assets/background.js';")
-  
+
   // Also try a more general replacement in case the pattern is different
   content = content.replace(/import '\.\/assets\/background[^']*\.js';/, "import './assets/background.js';")
-  
+
   fs.writeFileSync(swLoaderPath, content)
   console.log('Updated service worker content:', content)
   console.log('Updated service-worker-loader.js to use background.js')
