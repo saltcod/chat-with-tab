@@ -9,10 +9,10 @@ importers:
   .:
     dependencies:
       ai:
-        specifier: ^5.0.15
+        specifier: 5.0.15
         version: 5.0.15(zod@3.25.76)
       openai:
-        specifier: ^5.12.2
+        specifier: 5.12.2
         version: 5.12.2(zod@3.25.76)
       react:
         specifier: ^19.1.1
