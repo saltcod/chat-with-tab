@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/chat/route.ts": {
+      "runtime": "edge"
+    }
+  },
+  "buildCommand": "echo 'No build needed'",
+  "outputDirectory": ".",
+  "installCommand": "pnpm install"
+}
