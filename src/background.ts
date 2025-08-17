@@ -8,8 +8,11 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
 
   if (message.type === 'CHAT_REQUEST') {
     try {
-      // Call the AI API
-      const response = await fetch('https://your-vercel-app.vercel.app/api/chat', {
+      // Call the AI API - replace with your actual Vercel URL
+      const apiUrl = 'https://chat-with-tab-c3sv.vercel.app/api/chat'
+      console.log('Calling API at:', apiUrl)
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
